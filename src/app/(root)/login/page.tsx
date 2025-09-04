@@ -48,7 +48,7 @@ export default function LoginPage() {
 
         // Check if user is admin
         if (data.user.userType === "admin") {
-          router.push("/dashboard")
+          router.push("/pannel")
         } else {
           setError("Admin access required")
         }
