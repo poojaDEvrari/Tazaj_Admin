@@ -40,7 +40,11 @@ import {
 import { API_BASE_URL } from "../../lib/config"
 import { loadProducts, loadStats, loadUsers, loadOrders, getAuthHeaders } from "../../lib/data"
 import { GroceryItems } from "../../lib/grocery-items"
-
+interface InvoiceItem {
+  name: string
+  price: number
+  quantity: number
+}
 interface User {
   _id: string
   name: string
@@ -388,7 +392,7 @@ export default function DashboardPage() {
               <tbody>
                 ${invoiceData.order.items
                   .map(
-                    (item) => `
+                    (item:InvoiceItem) => `
                   <tr>
                     <td>${item.name}</td>
                     <td>${item.quantity}</td>
