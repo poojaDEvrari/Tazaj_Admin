@@ -457,9 +457,13 @@ export default function DashboardPage() {
         <div className="px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <div className="bg-green-100 p-3 rounded-xl">
-                <ShoppingCart className="h-8 w-8 text-green-600" />
-              </div>
+               <div  >
+  <img 
+    src="/iconn.png"
+    alt="cart"
+    className="h-20 w-20 object-contain"
+  />
+</div>
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">Tazaj Admin</h1>
                 <p className="text-gray-600 text-sm">Fresh Grocery Management Dashboard</p>
@@ -596,8 +600,8 @@ export default function DashboardPage() {
                 <CardContent>
                   <div className="text-2xl font-bold text-gray-900">{stats.totalOrders}</div>
                   <div className="flex items-center mt-2">
-                    <DollarSign className="h-3 w-3 text-orange-600 mr-1" />
-                    <span className="text-xs text-orange-600 font-medium">All time</span>
+                    <div className="text-xs text-orange-600">BHD </div>
+                    <span className="text-xs text-orange-600 font-medium">-All time</span>
                   </div>
                 </CardContent>
               </Card>

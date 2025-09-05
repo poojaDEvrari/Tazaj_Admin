@@ -63,16 +63,21 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-900 flex items-center justify-center p-4">
-      <Card className="w-full max-w-md bg-slate-800 border-slate-700">
+    <div className="min-h-screen bg-green-700 flex items-center justify-center p-4">
+      <Card className="w-full max-w-md bg-white border-white-700">
         <CardHeader className="text-center">
           <div className="flex justify-center mb-4">
-            <div className="p-3 bg-blue-600 rounded-full">
-              <ShoppingCart className="h-8 w-8 text-white" />
-            </div>
+      <div  >
+  <img 
+    src="/iconn.png"
+    alt="cart"
+    className="h-20 w-20 object-contain"
+  />
+</div>
+
           </div>
-          <CardTitle className="text-2xl font-bold text-white">Admin Login</CardTitle>
-          <CardDescription className="text-slate-400">Sign in to access the admin dashboard</CardDescription>
+          <CardTitle className="text-2xl font-bold text-slate-600">Admin Login</CardTitle>
+          <CardDescription className="text-slate-600">Sign in to access the admin dashboard</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleLogin} className="space-y-4">
@@ -87,7 +92,7 @@ export default function LoginPage() {
                 value={emailOrPhone}
                 onChange={(e) => setEmailOrPhone(e.target.value)}
                 required
-                className="bg-slate-700 border-slate-600 text-white placeholder:text-slate-400"
+                className="bg-gray-200 border-slate-800 text-slate-600 placeholder:text-slate-500"
               />
             </div>
             <div className="space-y-2">
@@ -102,7 +107,7 @@ export default function LoginPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                  className="bg-slate-700 border-slate-600 text-white placeholder:text-slate-400 pr-10"
+                  className="bg-gray-200 border-slate-800 text-slate-600 placeholder:text-slate-500 pr-10"
                 />
                 <button
                   type="button"
@@ -118,8 +123,8 @@ export default function LoginPage() {
                 <AlertDescription className="text-red-200">{error}</AlertDescription>
               </Alert>
             )}
-            <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" disabled={isLoading}>
-              {isLoading ? "Signing in..." : "Sign In"}
+            <Button type="submit" className="w-full bg-green-700 hover:bg-green-700" disabled={isLoading}>
+              {isLoading ? "Logging in..." : "Login"}
             </Button>
           </form>
         </CardContent>
