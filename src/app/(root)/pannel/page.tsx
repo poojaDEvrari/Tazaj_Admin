@@ -30,7 +30,7 @@ import {
   DollarSign,
   Bell,
   Search,
-  Filter,
+ 
   CheckCircle,
   XCircle,
   Clock,
@@ -619,16 +619,7 @@ export default function DashboardPage() {
                     </CardTitle>
                     <CardDescription className="text-gray-600">Manage user accounts and permissions</CardDescription>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <Button variant="outline" size="sm" className="border-gray-300 bg-transparent">
-                      <Filter className="h-4 w-4 mr-2" />
-                      Filter
-                    </Button>
-                    <Button variant="outline" size="sm" className="border-gray-300 bg-transparent">
-                      <Search className="h-4 w-4 mr-2" />
-                      Search
-                    </Button>
-                  </div>
+                
                 </div>
               </CardHeader>
               <CardContent className="p-6">
@@ -1058,12 +1049,7 @@ export default function DashboardPage() {
                     </CardTitle>
                     <CardDescription className="text-gray-600">View and manage customer orders</CardDescription>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <Button variant="outline" size="sm" className="border-gray-300 bg-transparent">
-                      <Filter className="h-4 w-4 mr-2" />
-                      Filter
-                    </Button>
-                  </div>
+                  
                 </div>
               </CardHeader>
               <CardContent className="p-6">
