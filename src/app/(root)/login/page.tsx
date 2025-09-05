@@ -69,7 +69,7 @@ export default function LoginPage() {
           <div className="flex justify-center mb-4">
       <div  >
   <img 
-    src="/iconn.png"
+    src="/Iconn.png"
     alt="cart"
     className="h-20 w-20 object-contain"
   />
