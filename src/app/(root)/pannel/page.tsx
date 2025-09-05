@@ -68,9 +68,12 @@ interface Product {
   sellerName: string
   isAvailable: boolean
   createdAt: string
-  discountPercent: number
-  taxPercent: number
-  applyVAT: boolean
+  discount?: number // Added for backend compatibility
+  tax?: number      // Added for backend compatibility
+  hasVAT?: boolean  // Added for backend compatibility
+  discountPercent?: number
+  taxPercent?: number
+  applyVAT?: boolean
 }
 
 interface Order {
@@ -459,7 +462,7 @@ export default function DashboardPage() {
             <div className="flex items-center space-x-4">
                <div  >
   <img 
-    src="/iconn.png"
+    src="/Iconn.png"
     alt="cart"
     className="h-20 w-20 object-contain"
   />
@@ -1006,13 +1009,13 @@ export default function DashboardPage() {
                           <div className="font-medium text-gray-900">{product.name}</div>
                           <div className="text-sm text-gray-600">{product.description}</div>
                           <div className="text-sm text-gray-600 mt-1">
-                            <span className="font-medium text-green-600">BHD {product.price}</span> | {product.quantity}{" "}
-                            {product.unit} | {product.category}
+                            <span className="font-medium text-green-600">BHD {product.price}</span> | {product.quantity} {product.unit} | {product.category}
                           </div>
                           <div className="text-sm text-gray-500">Seller: {product.sellerName}</div>
                           <div className="text-sm text-gray-500">
-                            Discount: {product.discountPercent}% | Tax: {product.taxPercent}% | VAT:{" "}
-                            {product.applyVAT ? "Yes" : "No"}
+                              <span className="font-semibold text-green-700">Discount:</span> {product.discount || product.discountPercent || 0}% |{' '}
+                              <span className="font-semibold text-blue-700">Tax:</span> {product.tax || product.taxPercent || 0}% |{' '}
+                              <span className="font-semibold text-amber-700">VAT:</span> {Boolean(product.hasVAT ?? product.applyVAT) ? 'Yes' : 'No'}
                           </div>
                         </div>
                       </div>
